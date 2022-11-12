@@ -25,6 +25,10 @@ public class BookService {
     public void createBook(Book book){
         bookRepository.save(book);
     }
+    public void updateBook(Book book){
+        bookRepository.save(book);
+    }
+
     public void deleteBook(Long id){
         Book book = bookRepository.findById(id).orElseThrow(()-> new RuntimeException("Book NOT FOUND"));
         bookRepository.deleteById(book.getId());

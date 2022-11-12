@@ -2,6 +2,7 @@ package com.application.courselibrary.service;
 
 import com.application.courselibrary.entity.Publisher;
 import com.application.courselibrary.repository.PublisherRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,8 +11,10 @@ import java.util.List;
  * @author zoetian
  * @create 2022/11/11
  */
+
 @Service
 public class PublisherService {
+    @Autowired
     private PublisherRepository publisherRepository;
     public List<Publisher> findAllPublishers(){
         return publisherRepository.findAll();
